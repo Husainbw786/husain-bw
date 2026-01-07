@@ -1,4 +1,5 @@
 import { ExternalLink, Github, Bot, Users, FileText, BarChart3, Code, Layers, Cpu, Globe } from 'lucide-react';
+import gtwyPreview from '@/assets/gtwy-preview.png';
 
 interface Project {
   title: string;
@@ -167,14 +168,11 @@ const Projects = () => {
                         </div>
                         <span className="text-xs text-muted-foreground font-mono ml-2">gtwy.ai</span>
                       </div>
-                      <div className="pt-8">
-                        <iframe
-                          src="https://gtwy.ai"
-                          title="GTWY.ai Preview"
-                          className="w-full h-48 pointer-events-none"
-                          loading="lazy"
-                        />
-                      </div>
+                      <img
+                        src={gtwyPreview}
+                        alt="GTWY.ai Dashboard Preview"
+                        className="w-full pt-8 object-cover"
+                      />
                     </div>
                     
                     {/* Stats Grid */}
