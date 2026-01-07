@@ -75,10 +75,14 @@ const CodingProfiles = () => {
               GitHub Streak
             </h3>
             <img
-              src="https://github-readme-streak-stats.herokuapp.com/?user=husainbw786&currStreakNum=2FD3EB&fire=pink&sideLabels=F00&theme=nightowl&hide_border=true&background=00000000"
+              src="https://streak-stats.demolab.com/?user=husainbw786&theme=nightowl&hide_border=true&background=00000000&currStreakNum=2FD3EB&fire=pink&sideLabels=F00"
               alt="GitHub Streak Stats"
               className="w-full"
               loading="lazy"
+              onError={(e) => {
+                const target = e.currentTarget;
+                target.src = "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=husainbw786&theme=nord_dark";
+              }}
             />
           </div>
           
